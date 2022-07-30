@@ -1,0 +1,249 @@
+:root {
+    --1-dark: #17477F;
+    --1-light: #5990A1;
+    --accent: #86B8D5;
+    --2-dark: #B9BCCE;
+    --2-light: #E1E2EB;
+    --black: #2F2D2E;
+    --white: #FFF;
+    --margin: 5%;
+} 
+
+@import url("https://fonts.googleapis.com/css?family=League+Spartan&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family: "League Spartan",sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+body{
+    background-color: var(--1-dark);
+}
+
+/* Navbar */
+.navbar li, .navbar a, button{
+    font-size: 16px;
+    color: var(--2-dark);
+}
+
+#active{
+    color:var(--white);
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem var(--margin);
+}
+
+.nav_links{
+    list-style: none;
+}
+
+.nav_links li{
+    display: inline-block;
+    padding: 0rem .2rem;
+}
+
+.nav_links li a{
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    padding: .3rem .5rem;
+    border-radius: .5rem;
+}
+
+.nav_links li a:hover{
+    color:var(--2-light);
+    font-size: 18px;
+    background-color: rgba(185,188,206, .3);
+}
+
+button{
+    padding: 0.6em 1em; 
+    border-radius: 5rem;
+    border-width: .1em;
+    border-style: solid;
+    border-color: var(--2-light);
+    transition: all 0.3s ease 0s;
+    color: var(--2-light);
+    background-color: var(--1-dark);
+}
+
+button:hover{
+    color: var(--1-dark);
+    border-color:var(--2-light);
+    background-color: var(--2-light);
+    cursor:pointer;
+}
+
+.logo img{
+    width: 4rem;
+}
+
+/* hamburger menu stuff */
+.hamburger_menu{
+    display: none;
+    cursor: pointer;
+}
+
+.bar{
+    display:block;
+    width: 2rem;
+    height: .2rem;
+    margin: .4rem auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--2-light);
+}
+
+@media(max-width: 890px){
+    .hamburger_menu{
+        display: block;
+    }
+
+    .nav_links{
+        display: none;
+    }
+}
+
+
+/* ---------------------------------------------------------------------------*/
+
+
+/* header title thing */
+.header h1, .header h2{
+    background-color: var(--2-light);
+    text-align: center;
+    color: var(--1-dark);
+    font-family: "Open Sans" sans-serif;
+    padding-left: var(--margin);
+    padding-right: var(--margin);
+}
+
+.title{
+    padding-top: 2rem;
+    font-size: 72px;
+    font-weight: 800;
+}
+
+.subtitle{
+    padding-bottom: 2rem;
+    font-size: 62px;
+    font-weight: 200;
+}
+
+.text{
+    font-size: 16px;
+    font-weight: 400;
+    color:var(--2-dark);
+    margin: 2rem var(--margin);
+    line-height: 1.4rem;
+}
+
+
+/* sponsor tiers */
+.diamond_tier h1{background-color: #B4BADD;}
+.platinum_tier h1{background-color: #B8B8B8;}
+.gold_tier h1{background-color: #D4C188;}
+
+.tier_header{
+    text-align: center;
+    font-size: 42px;
+    font-weight: 600;
+    font-family: "Open Sans" sans-serif;
+    color: var(--white);
+    padding: 1.2rem;
+    margin: 0 var(--margin);
+    margin-top: 3rem;
+    border-radius: 1rem;
+}
+.sponsor_imgs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: .8rem var(--margin);
+    gap: .5rem;
+    width: 90%;
+}
+
+.sponsor_imgs img{
+    width: 100%;
+    transition: all .3s ease 0s;
+}
+
+.sponsor_imgs img:hover{
+    filter: brightness(50%);
+}
+
+@media(max-width:450px){
+    .sponsor_imgs img{
+        width: 100%;
+    }
+    .sponsor_imgs {
+        display: block;
+    }
+}
+
+.sponsor_names{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: .8rem var(--margin);
+    gap: .5rem;
+}
+.sponsor_names h3{
+    flex: 1;
+    text-align: center;
+    color: var(--black);
+    margin-top: -40%;
+    display: none;
+}
+
+
+/*  become a sponsor buttons */
+.container{
+    margin: var(--margin);
+}
+.content button{
+    position: relative;
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    margin: 2rem 0;
+}
+
+#sponsor_pkg{
+    font-size: 30px;
+    width: 15em;
+}
+
+#contact_btn{
+    font-size: 42px;
+    width: 10em;
+    background-color: var(--2-light);
+    border-color: var(--2-light);
+    color: var(--1-dark);
+}
+
+#contact_btn:hover{
+    background-color: var(--accent);
+    color: var(--white);
+}
+
+@media(max-width:550px){
+    #sponsor_pkg{
+        font-size: 6vw;
+    }
+    #contact_btn{
+        font-size: 9vw;
+    }
+}
+
+
+
+
